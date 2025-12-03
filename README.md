@@ -98,7 +98,7 @@ These features had the strongest influence on the model's predictions.
 
 
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 1. Clone the repository:
 
@@ -113,5 +113,6 @@ These features had the strongest influence on the model's predictions.
    ```
 3. Run all cells to reproduce results.
 
+4. Change Data Set's absolute path to your local path
 ---
 This project was created as part of a machine learning learning module focusing on classification techniques, model evaluation, and data-driven insights.
