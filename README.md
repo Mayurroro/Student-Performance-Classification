@@ -12,8 +12,8 @@ A machine learning project designed to classify student performance based on aca
   * Data preprocessing
   * Model training & evaluation
   * Feature importance analysis
-* **Student_performance_data_.csv** – Dataset used for model development
-* **PDF Report** – A concise 2–3 page report summarizing the project (if added)
+* **Student_performance_data_.csv** – Dataset used for model development.
+* **PDF Report** – A concise 4 page report summarizing the project.
 
 ---
 
@@ -60,10 +60,8 @@ Insights:
 
 Multiple machine learning models were trained and compared:
 
-* Logistic Regression
 * Decision Tree Classifier
 * Random Forest Classifier
-* Support Vector Machine (SVM)
 
 **Best Model:** Random Forest
 
@@ -76,12 +74,10 @@ Multiple machine learning models were trained and compared:
 
 Evaluation metrics used:
 
-* Accuracy
-* Precision
-* Recall
+* Confusion Matrix
 * F1-score
 
-The Random Forest Classifier outperformed other models due to stronger generalization and better handling of complex feature interactions.
+The Random Forest Classifier outperformed Decision Tree model due to stronger generalization and better handling of complex feature interactions.
 
 ---
 
@@ -89,10 +85,11 @@ The Random Forest Classifier outperformed other models due to stronger generaliz
 
 Top contributing features:
 
-* Study hours
-* Attendance percentage
 * Previous exam performance
-* Parental education level
+* Attendance percentage
+* Study hours
+* Parental support
+* Tutoring
 
 These features had the strongest influence on the model's predictions.
 
@@ -113,6 +110,6 @@ These features had the strongest influence on the model's predictions.
    ```
 3. Run all cells to reproduce results.
 
-4. Change Data Set's absolute path to your local path
+4. Change Data Set's absolute path to your local path.
 ---
 This project was created as part of a machine learning learning module focusing on classification techniques, model evaluation, and data-driven insights.
