@@ -14,6 +14,7 @@ Predicting student performance helps identify learners at risk of failing so tha
 
       Student-Performance-Classification/
       ├── Student_performance_Classification.ipynb # Main notebook with code & analysis
+      ├── Student_performance_Classification-Project_report.pdf # Project report
       ├── Student_performance_data _.csv # Dataset
       ├── README.md # This file
 
