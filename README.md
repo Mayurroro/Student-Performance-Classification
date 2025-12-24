@@ -16,7 +16,9 @@ Predicting student performance helps identify learners at risk of failing so tha
       ├── Student_performance_Classification.ipynb # Main notebook with code & analysis
       ├── Student_performance_Classification-Project_report.pdf # Project report
       ├── Student_performance_data _.csv # Dataset
-      ├── README.md # This file
+      ├── model_DecisionTree # Saving model DecisionTree
+      ├── RandomForest_model #saving model RandomForest
+      └── README.md # This file
 
 ---
 
