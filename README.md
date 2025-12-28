@@ -16,9 +16,15 @@ Predicting student performance helps identify learners at risk of failing so tha
       ├── Student_performance_Classification.ipynb # Main notebook with code & analysis
       ├── Student_performance_Classification-Project_report.pdf # Project report
       ├── Student_performance_data _.csv # Dataset
-      ├── model_DecisionTree # Saving model DecisionTree
-      ├── RandomForest_model #saving model RandomForest
+      ├── DecisionTree.pkl # Saving model DecisionTree
+      ├── RandomForest.pkl #saving model RandomForest
+      ├── app.py #interactive streamlit interface
       └── README.md # This file
+
+---
+## Streamlit Link
+   **Link**
+      https://student-performance-classification.streamlit.app/
 
 ---
 
@@ -83,4 +89,4 @@ Explore the data, models, and results step by step.
 ---
 ## 👨‍💻 Author
 
-Mayur Roro – This project demonstrates a real-world machine learning pipeline for educational data analysis and prediction 🧠📈.
+Mayur Roro – This project demonstrates a real-world machine learning pipeline for educational data analysis and prediction .

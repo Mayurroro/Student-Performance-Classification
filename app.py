@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 # -----------------------------
 # App Title
@@ -104,40 +105,7 @@ if st.button("🔍 Predict Result"):
         st.error("❌ Prediction: **FAIL**")
 
 
-# -----------------------------
-# Feature Importance Graph
-# -----------------------------
-feature_name =["age","famsize","Medu","Fedu","Mjob","Fjob",
-               "guardian","traveltime","studytime","failures",
-               "schoolsup","activities","higher","internet",
-               "romantic","famrel","freetime","goout","Dalc",
-               "Walc","health","absences","G1","G2"]
 
-if model_selection == "Decision Tree":
-    with open('DecisionTree.pkl','br') as f:
-        model = pickle.load(f)
-
-else:
-    with open('RandomForest.pkl','br') as f:
-        model = pickle.load(f)
-
-importances = model.feature_importances_
-
-fi_df = pd.DataFrame({
-    "Feature": feature_name,
-    "Importance": importances
-}).sort_values(by="Importance", ascending=False)
-feat_imp = pd.Series(importances).sort_values(ascending=False)
-
-st.subheader("📊 Feature Importance")
-
-fig, ax = plt.subplots()
-ax.barh(fi_df["Feature"], fi_df["Importance"])
-ax.invert_yaxis()
-ax.set_xlabel("Importance Score")
-ax.set_ylabel("Features")
-
-st.pyplot(fig)
 
 
 # -----------------------------
