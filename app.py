@@ -107,13 +107,11 @@ if st.button("🔍 Predict Result"):
 # -----------------------------
 # Feature Importance Graph
 # -----------------------------
-
-df = pd.read_csv("student-por.csv",sep = ";")
-df.head()
-
-X = df.drop(['G3', 'school','sex', 'address', 'reason','Pstatus','paid','famsup','nursery'], axis=1)
-y = df['G3']
-
+feature_name =["age","famsize","Medu","Fedu","Mjob","Fjob",
+               "guardian","traveltime","studytime","failures",
+               "schoolsup","activities","higher","internet",
+               "romantic","famrel","freetime","goout","Dalc",
+               "Walc","health","absences","G1","G2"]
 
 if model_selection == "Decision Tree":
     with open('DecisionTree.pkl','br') as f:
@@ -124,11 +122,22 @@ else:
         model = pickle.load(f)
 
 importances = model.named_steps["model"].feature_importances_
+
+fi_df = pd.DataFrame({
+    "Feature": feature_name,
+    "Importance": importances
+}).sort_values(by="Importance", ascending=False)
 feat_imp = pd.Series(importances, index=X.columns).sort_values(ascending=False)
 
-feat_imp.plot(kind="bar", figsize=(10,5))
-plt.title("Feature Importance - Random Forest Pipeline")
-plt.show()
+st.subheader("📊 Feature Importance")
+
+fig, ax = plt.subplots()
+ax.barh(fi_df["Feature"], fi_df["Importance"])
+ax.invert_yaxis()
+ax.set_xlabel("Importance Score")
+ax.set_ylabel("Features")
+
+st.pyplot(fig)
 
 
 # -----------------------------
