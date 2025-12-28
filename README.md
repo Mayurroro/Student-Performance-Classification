@@ -19,6 +19,8 @@ Predicting student performance helps identify learners at risk of failing so tha
       ├── DecisionTree.pkl # Saving model DecisionTree
       ├── RandomForest.pkl #saving model RandomForest
       ├── app.py #interactive streamlit interface
+      ├── requirements.txt #essential requirements for app.py 
+      ├── student.txt #information about features
       └── README.md # This file
 
 ---
