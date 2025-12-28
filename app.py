@@ -121,13 +121,13 @@ else:
     with open('RandomForest.pkl','br') as f:
         model = pickle.load(f)
 
-importances = model.named_steps["model"].feature_importances_
+importances = model.feature_importances_
 
 fi_df = pd.DataFrame({
     "Feature": feature_name,
     "Importance": importances
 }).sort_values(by="Importance", ascending=False)
-feat_imp = pd.Series(importances, index=X.columns).sort_values(ascending=False)
+feat_imp = pd.Series(importances).sort_values(ascending=False)
 
 st.subheader("📊 Feature Importance")
 
